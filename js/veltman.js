@@ -164,9 +164,10 @@ d3.json("data/subte.json",function(error,subte) {
     .data(tiles, function(d) { return d; })
     .enter().append("img")
     .attr("class", "tile")
-    .attr("src", function(d) { return "http://" + ["a", "b", "c", "d"][Math.random() * 2 | 0] + ".tiles.mapbox.com/v3/gcbadata.gdmoea7m/" + d[2] + "/" + d[0] + "/" + d[1] + ".png"; })
+//    .attr("src", function(d) { return "http://" + ["a", "b", "c", "d"][Math.random() * 2 | 0] + ".tiles.mapbox.com/v3/gcbadata.gdmoea7m/" + d[2] + "/" + d[0] + "/" + d[1] + ".png"; })
+    .attr("src", "images/alpha.png")
     .style("left", function(d) { return (d[0] << 8) + "px"; })
-    .style("top", function(d) { return (d[1] << 8) + "px"; })      
+    .style("top", function(d) { return (d[1] << 8) + "px"; });
   
   var monochromePaths = map.append("g")
     .attr("class","monochrome line")
